@@ -11,17 +11,13 @@ class ArticlesController < ApplicationController
     end
   end
    
-  public
-    def article_params
-      params.require(:article).permit(:title, :text)
-  end
   
   def show
     @article = Article.find(params[:id])
   end
   
   def index 
-    @articles=Article.all
+    @articles =Article.all.paginate(page: params[:page], per_page: 3)
   end
   
   def edit
@@ -45,6 +41,7 @@ class ArticlesController < ApplicationController
   
   private
     def article_params
-      params.require(:article).permit(:title, :text)
+      params.require(:article).permit(:title, :text, :attachment)
     end
+ 
 end

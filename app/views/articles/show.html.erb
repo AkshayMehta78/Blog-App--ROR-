@@ -8,6 +8,11 @@
   <%= @article.text %>
 </p>
  
+ <p>
+  <strong>Attachment:</strong>
+  <%= image_tag @article.attachment.url(:thumb)  %> 
+</p>
+
 <h2>Comments</h2>
 <% @article.comments.each do |comment| %>
   <p>
@@ -20,7 +25,7 @@
     <%= comment.body %>
   </p>
 <% end %>
- 
+
 <h2>Add a comment:</h2>
 <%= form_for([@article, @article.comments.build]) do |f| %>
   <p>
