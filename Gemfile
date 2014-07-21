@@ -24,7 +24,12 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'spring'
+end
 
 gem 'devise'
 gem 'will_paginate', '~> 3.0'
@@ -33,6 +38,10 @@ gem 'acts-as-taggable-on'
 
 gem 'paperclip'
 
+gem 'foundation-rails'
+
+gem 'omniauth'
+gem 'omniauth-facebook' 
 
 
 # Use ActiveModel has_secure_password

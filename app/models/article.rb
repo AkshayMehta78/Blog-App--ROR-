@@ -11,4 +11,5 @@ class Article < ActiveRecord::Base
 		  :retina   => ['1200>',     :jpg, :quality => 30]
 			}
 	validates_attachment_content_type :attachment, :content_type => /\Aimage\/.*\Z/
+	acts_as_taggable_on :tags
 end

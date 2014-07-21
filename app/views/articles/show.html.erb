@@ -13,6 +13,15 @@
   <%= image_tag @article.attachment.url(:thumb)  %> 
 </p>
 
+<p>
+  <strong>Tags:</strong>
+<% @article.tags.any? %>
+  <% @article.tags.each do |tag| %>
+  <%= link_to tag.name, articles_url(:tag => tag.name) %>
+<% end %>
+</p>
+<br>
+
 <h2>Comments</h2>
 <% @article.comments.each do |comment| %>
   <p>

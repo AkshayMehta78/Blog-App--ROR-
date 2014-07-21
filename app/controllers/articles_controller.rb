@@ -17,7 +17,11 @@ class ArticlesController < ApplicationController
   end
   
   def index 
-    @articles =Article.all.paginate(page: params[:page], per_page: 3)
+    if params[:tag].present? 
+      @articles = Article.tagged_with(params[:tag]).paginate(page: params[:page], per_page: 3)
+    else 
+      @articles =Article.all.paginate(page: params[:page], per_page: 3)
+    end  
   end
   
   def edit
@@ -38,10 +42,12 @@ class ArticlesController < ApplicationController
     @article.destroy
     redirect_to articles_path
   end
-  
+
+
+
   private
     def article_params
-      params.require(:article).permit(:title, :text, :attachment)
+      params.require(:article).permit(:title, :text, :attachment,:tag_list)
     end
  
 end
