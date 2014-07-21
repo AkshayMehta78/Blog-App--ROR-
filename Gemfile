@@ -32,6 +32,8 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'spring'
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor'
 end
 
 gem 'devise'
