@@ -22,6 +22,12 @@
 </p>
 <br>
 
+<p><%= link_to "I have Read this artcile" , 'https://www.facebook.com/dialog/feed?
+  app_id=473701529432821
+  &display=popup&caption=An%20example%20caption 
+  &link=http://genii.in
+  &redirect_uri=http://localhost:3000' %></p>
+
 <h2>Comments</h2>
 <% @article.comments.each do |comment| %>
   <p>
