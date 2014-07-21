@@ -32,8 +32,10 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'spring'
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor'
+end
+
+group :production do
+  gem 'pg'
 end
 
 gem 'devise'
@@ -49,6 +51,10 @@ gem 'omniauth'
 gem 'omniauth-facebook' 
 
 gem 'heroku'
+
+gem 'rails_12factor', group: :production
+
+ruby "2.1.1"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
