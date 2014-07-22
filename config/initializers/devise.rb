@@ -42,6 +42,8 @@ config.scoped_views = true
   # These keys will be downcased upon creating or modifying a user and when used
   # to authenticate or find a user. Default is :email.
   config.case_insensitive_keys = [ :email ]
+  config.secret_key = 'd7c9cfddd3eb416d4182462b3b8ebe64239ce77464fa0398f6c884ba50d8083490bd0cff297e5e08c0a10a3951c74ac756c7a109bc41830e23ef35281bfceecf'
+
 
   # Configure which authentication keys should have whitespace stripped.
   # These keys will have whitespace before and after removed upon creating or
