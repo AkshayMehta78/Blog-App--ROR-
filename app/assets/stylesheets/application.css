@@ -14,3 +14,10 @@
  *= require_self
  *= require foundation_and_overrides
  */
+ .sign
+ {
+ 	position: relative;
+ 	left:10%;
+ 	margin-left:15px;
+ 	color: #FF0000;
+  }
