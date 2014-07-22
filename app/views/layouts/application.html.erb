@@ -21,7 +21,7 @@
 	<section class="top-bar-section">
 		<ul class="right">
 			<% if user_signed_in? %>
-				<li>Signed in as <%= current_user.email %> Not you?</li>
+				<li class="logged_in_msg">Signed in as <%= current_user.email %> Not you?</li>
 				<li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
 			<% else %>
 				<li><%= link_to "Sign Up",new_user_registration_path %></li> 

@@ -1,20 +1,29 @@
-<h1>Listing articles</h1>
-<%= link_to 'New article', new_article_path %>
-<table>
-  <tr>
-   <th>Title</th>
-   <th>Text</th>
-  </tr>
-  <% @articles.each do |article| %>
-  <tr>
-    <td><%= article.title %></td>
-    <td><%= article.text %></td>
-    <td><%= link_to 'Show', article_path(article) %></td>
-    <td><%= link_to 'Edit',edit_article_path(article)  %></td>
-    <td><%= link_to 'Destroy', article_path(article),method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-  <% end %>
-</table>
+
+<h3 class="head1">Listing All Articles</h3>
+<hr/>
+<div class="row">
+  <div class="large-4 rows">
+    <span class="new_article"><%= link_to 'New article', new_article_path %></span><br><Br>
+  </div>
+  <div class="large-8 rows">
+    <table>
+      <tr>
+           <th>Title</th>
+           <th>Text</th>
+           <th></th>
+           <th></th>
+           <th></th>
+      </tr>
+       <% @articles.each do |article| %>
+      <tr>
+          <td><%= article.title %></td>
+          <td><%= article.text %></td>
+          <td><%= link_to 'Show', article_path(article) %></td>
+          <td><%= link_to 'Edit',edit_article_path(article)  %></td>
+          <td><%= link_to 'Destroy', article_path(article),method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+  </table>
 <br>
 <%= will_paginate @articles %>
 

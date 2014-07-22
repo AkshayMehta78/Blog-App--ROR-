@@ -21,3 +21,10 @@
  	margin-left:15px;
  	color: #FF0000;
   }
+.logged_in_msg
+{
+	margin-top:10px;
+	color: #ffffff;
+	font-size: 15px;
+	background: #0000;
+}
