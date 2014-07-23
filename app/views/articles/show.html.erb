@@ -43,20 +43,20 @@
 
 <div class="container2">
   <div class="row">
-     <div class="large-4 columns">
+     <div class="large-4 rows">
        <h3>Comments</h3>
-      </div>
-    <div class="large-8 columns">
-      <% @article.comments.each do |comment| %>
-      <br>
-      <p>
+     </div>
+     <div class="large-8 rows">
+       <% @article.comments.each do |comment| %>
+       <br>
+         <p>
          <strong>Commenter:</strong>
          <%= comment.commenter %>
-      </p>
-       <p>
-        <strong>Comment:</strong>
-        <%= comment.body %>
-     </p>
+         </p>
+         <p>
+           <strong>Comment:</strong>
+           <%= comment.body %>
+        </p>
      <% end %>
   </div>
 </div>
