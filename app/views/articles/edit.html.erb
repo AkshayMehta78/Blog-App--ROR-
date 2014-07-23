@@ -20,12 +20,11 @@
   <%= f.text_field :title %>
 </p>
 </div>
-<div class="large-4 rows">
-<p>
+<div class="large-8 rows">
   <%= f.label :text %><br>
-  <%= f.text_area :text %>
-</p>
+  <%= f.text_area :text, :class=>'blog_content' , :columns=>'15', :rows=>'10' %>
 </div>
+
 <div class="large-4 rows">
 <p>Attachment</p>
   <%= f.file_field :attachment %>

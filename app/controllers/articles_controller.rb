@@ -1,9 +1,14 @@
 class ArticlesController < ApplicationController
+before_action :authenticate_user!, :only => [:new,:create,:edit,:destroy]
+before_filter :require_permission, :only => [:edit,:destroy]
   def new 
 	  @article = Article.new
-  end
+    end
+
   def create
+    @user = current_user.id
     @article = Article.new(article_params)
+    @article.user_id=@user
     if @article.save
       redirect_to @article
     else
@@ -43,7 +48,13 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
 
-
+  def require_permission
+     @article = Article.find(params[:id])
+      if current_user.id != @article.user_id
+      flash[:notice] = "You cannot edit/delete this article"
+      redirect_to articles_path 
+      end
+  end
 
   private
     def article_params

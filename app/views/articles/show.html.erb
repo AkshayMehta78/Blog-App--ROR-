@@ -1,19 +1,20 @@
+
 <div class="container">
   <div class="row">
-    <div class="large-4 rows">
+    <div class="large-8 columns">
       <strong>Title:</strong>
       <%= @article.title %>
     </div>
 
-    <div class="large-4 rows">
+    <div class="large-8 columns">
       <br>
      <p>
        <strong>Text:</strong>
-       <div class="value"> <%= @article.text %></div>
+       <div class="value"> <%=word_wrap(@article.text) %></div>
      </p>
     </div>
 
-    <div class="large-4 rows">   
+    <div class="large-8 columns">   
        <p>
          <strong>Attachment:</strong>
          <div class="value">  <%= image_tag @article.attachment.url(:thumb)  %> </div>
@@ -28,7 +29,7 @@
       <% end %>
   </div>
 
-  <div class="large-12 rows">
+  <div class="large-12 columns">
         <br><br>
       <div class="value"> <p>
         <%= link_to "I have Read this artcile" , 'https://www.facebook.com/dialog/feed?
@@ -42,10 +43,10 @@
 
 <div class="container2">
   <div class="row">
-     <div class="large-4 rows">
+     <div class="large-4 columns">
        <h3>Comments</h3>
       </div>
-    <div class="large-8 rows">
+    <div class="large-8 columns">
       <% @article.comments.each do |comment| %>
       <br>
       <p>
