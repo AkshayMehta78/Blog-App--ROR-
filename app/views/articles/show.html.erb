@@ -35,7 +35,7 @@
         app_id=473701529432821
         &display=popup&caption=An%20example%20caption 
         &link=http://genii.in
-        &redirect_uri=http://localhost:3000' ,:class => 'button' %></p></div>
+        &redirect_uri=http://localhost:3000' ,:class => 'small button' %></p></div>
   </div>
 </div>
 <hr/>
@@ -76,13 +76,13 @@
       <%= f.text_area :body %>
     </p>
     <p>
-      <%= f.submit :class=> 'button' %>
+      <%= f.submit :class=> 'small button' %>
     </p>
     <% end %>
  </div>
  <div class="large-4 rows">
-    <%= link_to 'Edit Article', edit_article_path(@article), :class=>'button' %> 
-    <%= link_to 'Back to Articles', articles_path, :class=> 'button' %>
+    <%= link_to 'Edit Article', edit_article_path(@article), :class=>'small button' %> 
+    <%= link_to 'Back to Articles', articles_path, :class=> 'small button' %>
 </div>
 </div>
 </div>

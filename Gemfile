@@ -48,7 +48,7 @@ gem 'paperclip'
 gem 'foundation-rails'
 
 gem 'omniauth'
-gem 'omniauth-facebook' 
+gem 'omniauth-facebook', '1.4.0'
 
 gem 'heroku'
 

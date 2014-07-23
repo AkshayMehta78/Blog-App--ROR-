@@ -256,6 +256,8 @@ config.scoped_views = true
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
-  require "omniauth-facebook"
-  config.omniauth :facebook, "473701529432821", "4a86c0c8c132a600c4687b32c5100142"
+
+   require "omniauth-facebook"
+   config.omniauth :facebook, "473701529432821", "4a86c0c8c132a600c4687b32c5100142",{provider_ignores_state: true}
+
 end
