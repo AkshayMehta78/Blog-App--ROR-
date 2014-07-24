@@ -25,7 +25,7 @@ before_filter :require_permission, :only => [:edit,:destroy]
     if params[:tag].present? 
       @articles = Article.tagged_with(params[:tag]).paginate(page: params[:page], per_page: 3)
     else 
-      @articles =Article.all.paginate(page: params[:page], per_page: 3)
+      @articles =Article.paginate(page: params[:page], per_page: 3)
     end  
   end
   
